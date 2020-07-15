@@ -1,0 +1,121 @@
+/* Selector de etiqueta */
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    width: min-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 20px 0px 20px;
+}
+pre{
+    margin: 15px;
+    background-color: rgb(20, 20, 20);
+    padding: 30px;
+    border-radius: 15px;
+}
+code{
+    color: springgreen;
+}
+
+/* Selector de clase */
+.parrafo-principal{
+    display: block;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(3, 3, 53);
+    color: white;
+    text-align: center;
+}
+
+/* Selector por ID */
+#parrafo-secundario{
+    text-align: justify;
+    font-family: monospace;
+    color: springgreen;
+    background-color: black;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+/* Selector global (*) */
+*{
+    color: rgb(39, 39, 39);
+}
+
+/* Selector descendiente */
+ol{
+    background-color: steelblue;
+    border-radius: 5px;
+    text-align: center;
+}
+ol li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    font-weight: bold;
+}
+
+/* Selector Multiple */
+.multi-a, .multi-b{
+    background-color: tomato;
+    padding: 15px;
+}
+
+/* Selector hijo directo */
+.hijo-directo > ul > li{
+    background-color: rgb(255, 148, 148);
+    font-weight: bold;
+    color: black;
+}
+
+/* Selector Adyacente */
+ul + p {
+    background-color: black;
+    padding: 10px;
+    display: inline;
+    color: white
+   }
+
+/* Selector de atributo */
+p[class="alexis"]{
+    background: red;
+    display: inline;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Selector de pseudoelemento visited */
+.pseudo-link{
+    display: block;
+    text-align: center;
+}
+.visited:visited{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    border-radius: 15px;
+    display: inline;
+}
+
+.enlaces{
+    display: block;
+    text-align: center;
+}
+.enlaces a{
+    display: inline-block;
+    width: initial;
+    text-transform: none;
+    margin: 10px;
+    background-color: rgb(255, 102, 102);
+}

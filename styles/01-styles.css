@@ -1,0 +1,24 @@
+.contenedor__uno{
+    width: 200px;
+    height: 300px;
+    background-color: red;
+    background-image: url(../img/perrito.jpg);
+    background-size: cover;
+    
+    border-style: solid;
+    border-style: dotted;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: red;
+}
+.contenedor__dos{
+    width: 350px;
+    height: 350px;
+    background-color: blue;
+    background-image: url(../img/perrito.jpg);
+    background-position: -290px -190px;
+    background-size: unset;
+
+    border: 5px solid red;
+    border-radius: 7px;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores</title>
+    <link rel="stylesheet" href="./styles/02.-styles.css">
+</head>
+<body>
+    <h1>01 - Selector de etiqueta (1pt)</h1>
+    <p>El selector de etiqueta permite modificar la apariencia de las etiquetas indicadas en CSS. Por ejemplo a continuación se modifica una etiqueta de enlace para que luzca distinta.</p>
+    <a href="#">Enlace</a>
+    <pre>
+        <code>
+/* Selector de etiqueta */
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    width: min-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 20px 0px 20px;
+}
+pre{
+    margin: 15px;
+    background-color: rgb(20, 20, 20);
+    padding: 30px;
+    border-radius: 15px;
+}
+code{
+    color: springgreen;
+}
+        </code>
+    </pre>
+
+    <h1>02 - Selector de clase (10pts)</h1>
+    <p>El selector de clase utiliza el atributo class="" para otorgar estilos sobre las clases indicadas en CSS. Por ejemplo el siguiente parrafo posee la clase "parrafo-principal".</p>
+    <p class="parrafo-principal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, commodi! Perferendis fugit iusto quibusdam suscipit excepturi, quidem dolorem numquam nemo natus laboriosam ullam, tenetur iure! Expedita magnam laboriosam cumque unde.</p>
+    <pre>
+        <code>
+/* Selector de clase */
+.parrafo-principal{
+    display: block;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(3, 3, 53);
+    color: white;
+    text-align: center;
+}
+        </code>
+    </pre>
+
+    
+    <h1>03 - Selector ID (100pts)</h1>
+    <p>El selector de ID no es muy recomendado de utilizar debido a su alta especificidad, es usado principalmente para generar enlaces internos en el documento HTML. En el siguiente ejemplo otro parrafo mediante selector ID.</p>
+    <p  id="parrafo-secundario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, itaque recusandae. Cumque consequuntur excepturi, repellat aut, aspernatur molestias facilis temporibus praesentium accusamus adipisci debitis harum officia tenetur autem, incidunt sit!</p>
+    <pre>
+        <code>
+/* Selector por ID */
+#parrafo-secundario{
+    text-align: justify;
+    font-family: monospace;
+    color: springgreen;
+    background-color: black;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 20px;
+}
+        </code>
+    </pre>
+    
+    <h1>04 - Selector Global</h1>
+    <p>Permite modificar el estilo de todo el documento HTML, tambien es replicable utilizando un selector en body o en html. En el ejemplo se modifico el color de todos los textos por defecto a gris oscuro.</p>
+    <pre>
+        <code>
+/* Selector global (*) */
+*{
+    color: rgb(39, 39, 39);
+}
+        </code>
+    </pre>
+
+    <h1>05 - Selector descendiente</h1>
+    <p>Permite dar estilos a etiquetas según su anidamiento, es decir, aplica estilos a las etiquetas que compartan el orden descrito en CSS. Como ejemplo se modificara la siguiente lista.
+    </p>
+    <ol>
+        <li>Pizza</li>
+        <li>Sushi</li>
+        <li>Hamburguesas</li>
+    </ol>
+    <pre>
+        <code>
+/* Selector descendiente */
+ol{
+    background-color: steelblue;
+    border-radius: 5px;
+    text-align: center;
+}
+ol li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    font-weight: bold;
+}
+</code>
+</pre>
+
+    <h1>06 - Selector Multiple</h1>
+    <p>Selector que aplica estilos a todos los elementos indicados separados por coma. En el ejemplo le cambiaremos el estilo a dos elementos con distintas clases.</p>
+    <p class="multi-a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, porro provident adipisci recusandae exercitationem error, non harum numquam ut tempore praesentium, temporibus officia labore iusto? Fuga officiis accusantium necessitatibus sit?</p>
+    <h4 class="multi-b">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi nemo voluptatum officia earum optio in quas placeat aspernatur pariatur adipisci aliquid recusandae, illo doloribus! Officiis deleniti atque maiores temporibus eius!</h4>
+    <pre>
+        <code>
+/* Selector Multiple */
+.multi-a, .multi-b{
+    background-color: tomato;
+    padding: 15px;
+}
+        </code>
+    </pre>
+
+    <h1>07 - Selector hijo directo</h1>
+    <p>Aplica estilos a todos los elementos siguientes del elemento indicado en CSS. En el ejemplo se le aplican estilos a los elementos hijos de una lista.</p>
+    <div class="hijo-directo">
+        <ul>
+            <li>Primer elemento</li>
+            <li>Segundo elemento
+                <ul>
+                    <li>Primer elemento interno</li>
+                </ul>
+            </li>
+            <li>Tercer elemento</li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+/* Selector hijo directo */
+.hijo-directo > ul > li{
+    background-color: rgb(255, 148, 148);
+    font-weight: bold;
+    color: black;
+}
+        </code>
+    </pre>
+    
+    <h1>08 - Selector adyacente</h1>
+    <p>Aplica estilos al primer elemento inmediatamente siguiente indicado en CSS. En el ejemplo modificamos el estilo del primer parrafo adyacente a una lista.</p>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ul>
+    <p>Primer texto</p>
+    <p>Segundo texto</p>
+
+    <pre>
+        <code>
+/* Selector Adyacente */
+ul + p {
+    background-color: black;
+    padding: 10px;
+    display: inline;
+    color: white
+    }
+        </code>
+    </pre>
+    
+    
+    <h1>9 - Selector de atributos</h1>
+    <p>Aplica estilos según el atributo que posea la etiqueta indicada. En el ejemplo destacamos los parrafos que posean el atributo class y el valor "alexis".</p>
+    <p class="maria">Maria</p>
+    <p class="alexis">Alexis</p>
+    <p class="felix">Felix</p>
+    <pre>
+        <code>
+/* Selector de atributo */
+p[class="alexis"]{
+    background: red;
+    display: inline;
+    padding: 15px;
+    font-weight: bold;
+}
+        </code>
+    </pre>
+
+    <h1>10 - Selector X:visited</h1>
+    <p>Estos selectores mediante pseudoelementos permiten modificar el estilo cuando un enlace a sido visitado.</p>
+    <div class="pseudo-link">
+        <a class="visited" href="#">VISITED</a>
+    </div>
+    <pre>
+        <code>
+/* Selector de pseudoelemento visited */
+.pseudo-link{
+    display: block;
+    text-align: center;
+}
+.visited:visited{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    border-radius: 15px;
+    display: inline;
+}
+        </code>
+    </pre>
+    
+    <div class="enlaces">
+        <a href="./01-width-height-background_border.html">Ir a 01 - Width Height Background & Border</a>
+        <a href="https://code.tutsplus.com/es/tutorials/the-30-css-selectors-you-must-memorize--net-16048">Ir a Página para selectores CSS</a>
+        <a href="http://flukeout.github.io/">Ir a Juego</a>
+        <a href="./03-estilos-texto.html">Ir a 03 - estilos de texto</a>
+    </div>
+</body>
+</html>

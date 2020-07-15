@@ -1,0 +1,17 @@
+body{
+    margin-left: 60px;
+}
+
+.radio{
+    display: inline;
+    margin: 20px 0;
+}
+
+input{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
